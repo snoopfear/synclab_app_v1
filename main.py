@@ -15,7 +15,6 @@ if __name__ == '__main__':
     network = Networks(config.NETWORK)
     match(network): 
         case Networks.POLYGON: network_data = polygon.DATA
-        case Networks.ARBITRUM: network_data = arbitrum.DATA
         case Networks.OPTIMISM: network_data = optimism.DATA
 
     w3 = Web3(Web3.HTTPProvider(network_data['RPC']))
